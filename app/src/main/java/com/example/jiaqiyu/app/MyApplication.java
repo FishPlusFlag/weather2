@@ -3,6 +3,7 @@ package com.example.jiaqiyu.app;
 import android.app.Application;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.ListView;
 
 import com.example.jiaqiyu.bean.City;
 import com.example.jiaqiyu.db.CityDB;
@@ -23,6 +24,7 @@ public class MyApplication extends Application {
     private static MyApplication mApplication;
     private  CityDB mCityDB;
     private List<City> mCityList;
+
 
     @Override
     public void onCreate() {

@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
         android:background="#ffcd2626">
@@ -32,8 +33,41 @@
             android:layout_toRightOf="@id/title_back"
             android:background="#A71717"
             android:gravity="center"/>
-
     </RelativeLayout>
+
+    <EditText
+
+        android:id="@+id/searchbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入全国城市（汉字或拼音）"
+        android:ems="10"
+        android:singleLine="true"
+        android:layout_below="@+id/title"
+        android:drawableLeft="@drawable/magnifying_glass"
+        android:padding="8dip"
+        android:paddingBottom="8dip"
+        android:paddingLeft="30.0dip"
+        android:paddingRight="30.0dip"
+        android:paddingTop="8dip"
+        android:background="@drawable/contact_search_box_edittext_keyword_background"
+        android:textColor="#ff000000"
+        android:textColorHint="#ffcccccc"
+        android:textSize="18.0sp"
+        >
+    <requestFocus/>
+    </EditText>
+
+
+    <ListView
+                android:id="@+id/citylist_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/searchbox"
+                android:background="#06413531">
+
+    </ListView>
+
 
 
 </RelativeLayout>
