@@ -131,7 +131,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private void queryWeatherCode(String cityCode) {
         final String address="http://wthrcdn.etouch.cn/WeatherApi?citykey=" + cityCode;
-        Log.d("myWeather",address);
+        Log.e("myWeather",address);
         new Thread(new Runnable(){
             @Override
             public void run() {
