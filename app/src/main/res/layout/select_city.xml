@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff0f0f0">
 
     <RelativeLayout
         android:id="@+id/title"
@@ -38,35 +39,57 @@
     <EditText
 
         android:id="@+id/searchbox"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="输入全国城市（汉字或拼音）"
         android:ems="10"
+        android:layout_margin="10dp"
+        android:cursorVisible="true"
         android:singleLine="true"
         android:layout_below="@+id/title"
         android:drawableLeft="@drawable/magnifying_glass"
+        android:drawablePadding="8dp"
         android:padding="8dip"
-        android:paddingBottom="8dip"
-        android:paddingLeft="30.0dip"
-        android:paddingRight="30.0dip"
-        android:paddingTop="8dip"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="30.0dp"
+        android:paddingTop="8dp"
         android:background="@drawable/contact_search_box_edittext_keyword_background"
         android:textColor="#ff000000"
         android:textColorHint="#ffcccccc"
-        android:textSize="18.0sp"
+        android:textSize="15.0sp"
         >
     <requestFocus/>
     </EditText>
 
 
-    <ListView
-                android:id="@+id/citylist_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/searchbox"
-                android:background="#06413531">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/searchbox"
+        android:paddingTop="16.0dip">
 
-    </ListView>
+        <ListView
+            android:id="@+id/city_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </ListView>
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:paddingLeft="10dip"/>
+        <TextView
+            android:id="@+id/city_number"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/city_name"
+            android:textColor="@android:color/black"
+            android:paddingLeft="10dip"/>
+
+    </RelativeLayout>
 
 
 

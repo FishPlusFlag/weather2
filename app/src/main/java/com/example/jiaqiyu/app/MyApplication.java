@@ -1,6 +1,7 @@
 package com.example.jiaqiyu.app;
 
 import android.app.Application;
+import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.ListView;
@@ -24,6 +25,11 @@ public class MyApplication extends Application {
     private static MyApplication mApplication;
     private  CityDB mCityDB;
     private List<City> mCityList;
+    public static String path;
+
+    public static Context getIntance() {
+        return mApplication;
+    }
 
 
     @Override
@@ -65,7 +71,7 @@ public class MyApplication extends Application {
         return mApplication;
     }
     private CityDB openCityDB(){
-        String path = "/data"
+       path = "/data"
                 + Environment.getDataDirectory().getAbsolutePath()
                 + File.separator+getPackageName()
                 +File.separator+"databases1"
