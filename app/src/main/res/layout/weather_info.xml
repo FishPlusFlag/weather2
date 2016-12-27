@@ -170,6 +170,7 @@
         </LinearLayout>
         <!-- 今日天气信息块 -->
         <RelativeLayout
+            android:id="@+id/todayWeather_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -251,6 +252,33 @@
             />
             -->
         <!-- 七日天气信息 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/forcastWeather"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_below="@id/todayWeather_view"
+                android:paddingTop="30dip">
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
         <!-- 广告等信息 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="此处为广告信息..."
+                android:layout_gravity = "center"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:paddingBottom="20dip"/>
+        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
